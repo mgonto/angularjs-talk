@@ -7,6 +7,10 @@ angular.module('sampleApp', ['restangular'])
         templateUrl: '/views/movies/show.html',
         controller: 'MoviesShowCtrl'
       })
+      .when('/directors/:directorId', {
+        templateUrl: '/views/directors/show.html',
+        controller: 'DirectorsShowCtrl'
+      })
       .otherwise({
         redirectTo: '/movies/show',
       });
