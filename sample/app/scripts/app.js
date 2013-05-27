@@ -1,13 +1,16 @@
 'use strict';
 
-angular.module('sampleApp', [])
-  .config(function ($routeProvider) {
+angular.module('sampleApp', ['restangular'])
+  .config(function ($routeProvider, RestangularProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/movies/show', {
+        templateUrl: '/views/movies/show.html',
+        controller: 'MoviesShowCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/movies/show',
       });
+
+
+      RestangularProvider.setBaseUrl("http://angularjstalk.apiary.io")
   });
