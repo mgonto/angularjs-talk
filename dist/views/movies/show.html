@@ -1,8 +1,12 @@
 <div>
-  <h1>Movies</h1>
+  <h1>Top N Movies</h1>
+  <p>
+    <label>Select N</label>
+    <input type="text" ng-model="nMovies">
+  </p>
 
   <ol>
-    <li ng-repeat="movie in movies">
+    <li ng-repeat="movie in movies | orderBy:'stars' | reverse | first:nMovies">
       <h3>{{movie.name}}</h3>
       <p>Stars: {{movie.stars}}</p>
       <a href="#/directors/{{movie.director}}">See director info</a>

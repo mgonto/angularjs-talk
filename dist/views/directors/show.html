@@ -1,5 +1,6 @@
 <div ng-show="director">
 <h1>{{director.name}}</h1>
 
-<p>{{director.name}} was born at year {{director.birthYear}} in the city of {{director.city}}</p>
+<clickme show-data="director.birthYear" field-name="Birth Year"></clickme>
+<clickme show-data="director.city" field-name="City"></clickme>
 </div>
