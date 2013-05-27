@@ -3,7 +3,7 @@
 angular.module('sampleApp')
   .directive('clickme', function () {
     return {
-      templateUrl: '/scripts/directives/clickme.html',
+      templateUrl: '/scripts/directives/clickme/clickme.html',
       scope: {fieldName: '@', showData: '='},
       restrict: 'E',
       controller: function($scope) {
