@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('sampleApp')
-  .controller('MoviesShowCtrl', function ($scope, Restangular) {
-    $scope.movies = Restangular.all("movies").getList();
+  .controller('MoviesShowCtrl', function ($scope, Movies) {
+    $scope.movies = Movies.all();
   });
