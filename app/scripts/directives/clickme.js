@@ -3,7 +3,7 @@
 angular.module('sampleApp')
   .directive('clickme', function () {
     return {
-      templateUrl: '/scripts/directives/clickme/clickme.html',
+      templateUrl: '/views/directives/clickme.html',
       scope: {fieldName: '@', showData: '='},
       restrict: 'E',
       controller: function($scope) {
@@ -13,7 +13,7 @@ angular.module('sampleApp')
         $scope.show = function() {
           $scope.showInformation = true;
         }
-        
+
       }
     };
   });
