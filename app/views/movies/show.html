@@ -1,8 +1,8 @@
 <div>
-  <h1>Movies</h1>
+  <h1>Top 2 Movies</h1>
 
   <ol>
-    <li ng-repeat="movie in movies">
+    <li ng-repeat="movie in movies | orderBy:'stars' | reverse | first:2">
       <h3>{{movie.name}}</h3>
       <p>Stars: {{movie.stars}}</p>
       <a href="#/directors/{{movie.director}}">See director info</a>
