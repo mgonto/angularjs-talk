@@ -3,4 +3,4 @@ node_modules
 dist
 .tmp
 .sass-cache
-sample/app/components
+app/components
