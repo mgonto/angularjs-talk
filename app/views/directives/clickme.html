@@ -1,5 +1,5 @@
 <div>
-  <input ng-hide="showInformation" type="button" value="Click me to show information on {{fieldName}}" ng-click="show()" />
+  <input ng-hide="showInformation" type="button" value="Click me to show information on {{fieldName}}" ng-click="show() | trackEvent:'Home':'Clicked to find out'" />
   <p ng-show="showInformation">
     {{fieldName}}: {{showData}}
   </p>

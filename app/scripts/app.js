@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('sampleApp', ['restangular'])
-  .config(function ($routeProvider, RestangularProvider) {
+angular.module('sampleApp', ['restangular', 'angularytics'])
+  .config(function ($routeProvider, RestangularProvider, AngularyticsProvider) {
     $routeProvider
       .when('/movies/show', {
         templateUrl: '/views/movies/show.html',
@@ -15,6 +15,10 @@ angular.module('sampleApp', ['restangular'])
         redirectTo: '/movies/show',
       });
 
+      AngularyticsProvider.setEventHandlers(['Console', 'Google']);
+
 
       RestangularProvider.setBaseUrl("http://angularjstalk.apiary.io")
+  }).run(function(Angularytics) {
+    Angularytics.init();
   });
